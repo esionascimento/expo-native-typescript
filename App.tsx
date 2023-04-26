@@ -3,10 +3,11 @@ import { StatusBar } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import Routes from "./src/routes";
 import { NativeBaseProvider } from "native-base";
+import { theme } from "./src/theme";
 
 export default function App() {
   return (
-    <NativeBaseProvider>
+    <NativeBaseProvider theme={theme}>
       <NavigationContainer>
         <StatusBar backgroundColor={"#38A"} barStyle={"light-content"} />
         <Routes />
