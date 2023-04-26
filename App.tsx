@@ -2,13 +2,13 @@ import React from "react";
 import { StatusBar } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import Routes from "./src/routes";
-import { NativeBaseProvider } from "native-base";
+import { NativeBaseProvider, Text } from "native-base";
 import { theme } from "./src/theme";
 
 export default function App() {
   return (
     <NativeBaseProvider theme={theme}>
-      <NavigationContainer>
+      <NavigationContainer fallback={<Text>Loading...</Text>}>
         <StatusBar backgroundColor={"#38A"} barStyle={"light-content"} />
         <Routes />
       </NavigationContainer>
